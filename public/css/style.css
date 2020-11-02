@@ -1,0 +1,49 @@
+@font-face{
+    src: url(../fonts/Poiret_One/PoiretOne-Regular.ttf);
+    font-family: PoiretOne;
+}
+
+@font-face{
+    src: url(../fonts/Fira_Sans/FiraSans-Regular.ttf);
+    font-family: FiraSans;
+}
+
+body{
+    background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: PoiretOne;
+}
+
+p, div{
+    font-family: FiraSans;
+}
+
+.PoiretOne{
+    font-family: PoiretOne;
+}
+
+.FiraSans{
+    font-family: FiraSans;
+}
+
+.navbar-brand{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: FiraSans;
+}
+
+#notebook-description h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#notebook-description .notebook-right{
+    margin-top: 100px;
+}
+
+#notebook-description .notebook-left img {
+    margin-top: 20px;
+}

@@ -71,9 +71,9 @@ class NoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Note $note)
     {
-        //
+        return view('notes.edit', compact('note'));
     }
 
     /**
@@ -83,9 +83,12 @@ class NoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Note $note)
     {
-        //
+        $data = $request->all();
+        $note->update($data);
+        $notebook = $note->notebook_id;
+        return redirect(route('notebooks.show', compact('notebook')));
     }
 
     /**
@@ -94,9 +97,11 @@ class NoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Note $note)
     {
-        //
+        $note->delete();
+        $notebook = $note->notebook_id;
+        return redirect(route('notebooks.show', compact('notebook')));
     }
 
     /**

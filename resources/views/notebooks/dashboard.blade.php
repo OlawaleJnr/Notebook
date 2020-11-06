@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Notebook -->
-    <section id="notebook-description">
+    <section id="notebook-description pb-5">
         <div class="container">
             <div class="card my-4">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -24,7 +24,7 @@
                         <img src="{{ asset('assets/images/notebook_banner_display.png') }}" class="img-fluid" alt="notebook_banner">
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6 text-center">
                     <div class="notebook-right">
                         <h1>Notebook</h1>
                         <p>Store and Organize your thoughts in notebook and Notebook web app makes it more easier</p>

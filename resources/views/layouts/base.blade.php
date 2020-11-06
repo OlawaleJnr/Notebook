@@ -11,8 +11,8 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="{{ asset('assets/icons/fonts/css/all.css') }}">
 </head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm ">
         <div class="container">
             <a class="navbar-brand" href="{{ url('') }}">
                 Notebook

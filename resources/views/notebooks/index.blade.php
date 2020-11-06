@@ -5,10 +5,10 @@
         <section>
             <div class="container">
                 <div class="row pt-3">
-                    <div class="col-md-8">
-                        <h1 class="font-weight-bold">Your Notebooks</h1>
+                    <div class="col-md-8 col-6">
+                        <h4 class="font-weight-bold mt-1">Your Notebooks</h4>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
                         <a class="btn btn-primary float-right" href="{{ route('notebooks.create') }}" role="button">New Notebook <i class="fas fa-plus-circle ml-2"></i></a>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                         @forelse($notebooks as $notebook)
                             <div class="col-md-3 mb-3">
                                 <div class="card">
-                                    <img class="card-img-top" style="height: 180px;" src="{{ asset('assets/images/notebook_banner_display.png') }}" alt="Card image">
+                                    <img class="card-img-top" style="height: 220px;" src="{{ asset('assets/images/notebook_banner_display.png') }}" alt="Card image">
                                     <div class="card-body">
                                         <h5 class="card-title font-weight-bold">{{$notebook->name}}</h5>
                                         <div class="row">
@@ -28,12 +28,12 @@
                                             </div>
                                             <div class="col-md-4 col-sm-4 col-4">
                                                 <div class="d-flex justify-content-between mt-2">
-                                                    <a href="{{ route('notebooks.edit', $notebook->id) }}" class="btn btn-sm"><i class="fas fa-pencil-alt text-dark"></i></a>
+                                                    <a href="{{ route('notebooks.edit', $notebook->id) }}" class="btn btn-sm btn-dark"><i class="fas fa-pencil-alt"></i></a>
 
                                                     <form action="{{ route('notebooks.destroy', $notebook->id) }}" method="post">
                                                         @csrf
                                                         @method('delete')
-                                                        <button type="submit" class="btn btn-sm"><i class="fas fa-trash-alt text-danger"></i></button>
+                                                        <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button>
                                                     </form>
                                                 </div>
                                             </div>

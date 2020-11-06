@@ -74,7 +74,7 @@
     <section id="contribution" class="py-3 text-center">
         <div class="container">
             <p class="text-white">Contribute on Laravel Notebook by clicking the below button</p>
-            <a href="https://github.com/OlawaleJnr/LaravelNotebook" class="btn btn-lg btn-github btn-icon mb-3" target="_blank">
+            <a href="https://github.com/OlawaleJnr/Notebook" class="btn btn-lg btn-github btn-icon mb-3" target="_blank">
                 <span class="text-white"><i class="fab fa-github"></i></span>
                 <span class="text-white"><span class="text-warning">Star us</span> on Github</span>
             </a>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NotebookCreateRequest;
 use App\Notebook;
 use Illuminate\Http\Request;
 
@@ -53,7 +54,7 @@ class NotebookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NotebookCreateRequest $request)
     {
         $user_id = auth()->user()->id;
         $request['user_id'] = $user_id;
@@ -93,7 +94,7 @@ class NotebookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Notebook $notebook)
+    public function update(NotebookCreateRequest $request, Notebook $notebook)
     {
         $notebook = auth()->user()->notebooks->find($notebook);
         $notebook->update(['name' => $request->name]);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NoteCreateRequest;
 use App\Note;
 use App\Notebook;
 use Illuminate\Http\Request;
@@ -45,7 +46,7 @@ class NoteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NoteCreateRequest $request)
     {
         $data = $request->all();
         Note::create($data);
@@ -60,9 +61,9 @@ class NoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Note $note)
     {
-        //
+        return view('notes.show', compact('note'));
     }
 
     /**
@@ -83,7 +84,7 @@ class NoteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Note $note)
+    public function update(NoteCreateRequest $request, Note $note)
     {
         $data = $request->all();
         $note->update($data);

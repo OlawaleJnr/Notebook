@@ -20,6 +20,18 @@ p, div{
     font-family: FiraSans;
 }
 
+.text-brown{
+    color: #82674D;
+}
+
+.text-midnight-blue{
+    color: #2c3e50;
+}
+
+.text-crimson{
+    color: #a20025;
+}
+
 .PoiretOne{
     font-family: PoiretOne;
 }
@@ -46,4 +58,24 @@ p, div{
 
 #notebook-description .notebook-left img {
     margin-top: 20px;
+    height: 400px;
+}
+
+#info1 .section-left{
+    margin-top: 80px;
+}
+
+#info1 .section-right{
+    margin-top: 80px;
+}
+
+.btn-github {
+    color: #fff;
+    background-color: #222222;
+    border-color: #222222;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#contribution{
+    background-color: #82674D;
 }
